@@ -53,7 +53,7 @@ function  moneyDonateBtnClick(inputId ,receivedAmountId,placeId ) {
         // Histosy section  update
         const historyAdd = document.getElementById('history-section');
         const historyItem = document.createElement('div');
-        historyItem.className = 'p-4 md:p-8 border border-[#1111111A] rounded-2xl shadow'
+        historyItem.className = 'p-4 md:p-8 border border-[#1111111A] rounded-2xl shadow mb-4'
         historyItem.innerHTML = `
                <h1 class="pb-3 text-lg font-bold leading-5 md:text-xl text-txtPrimary">${donateAmount} Taka is ${place}</h1>
                <p class="text-base font-light text-txtSecondary">Date : ${new Date()}</p>
@@ -63,7 +63,8 @@ function  moneyDonateBtnClick(inputId ,receivedAmountId,placeId ) {
        
    }
 };
-   // ADD click  event listener to all "Money-Donate" buttons
+   
+// ADD click  event listener to all "Money-Donate" buttons
    moneyDonateBtn('donate-amount-btn1').addEventListener('click',function(){
        moneyDonateBtnClick ('money-inputField1' , 'noakhali-received-money', 'place1');
    })
